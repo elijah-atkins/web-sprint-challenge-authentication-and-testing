@@ -26,10 +26,10 @@ function remove(id) {
 }
 
 function findById(id) {
-  return db("users").where({ id }).first();
+  return db("users").select("id", "username").where({ id }).first();
 }
 function getUsers(id) {
-  let query = db("users");
+  let query = db("users").select("id", "username");
 
   if (id) {
     return query

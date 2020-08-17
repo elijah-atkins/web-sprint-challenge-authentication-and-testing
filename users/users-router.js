@@ -1,7 +1,5 @@
 const router = require("express").Router();
-//add restricted middleware to functions
-//const restricted = require("../auth/authenticate-middleware.js");
-const Users = require("./usersModel.js");
+const Users = require("./users-model.js");
 
 router.get("/", (req, res) => {
   Users.getUsers()
