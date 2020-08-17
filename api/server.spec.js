@@ -10,9 +10,7 @@ const user1 = {
   username: "user1",
   password: "password",
 };
-const auth = {
-  'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjoyLCJ1c2VybmFtZSI6IkVsaSIsImlhdCI6MTU5NzYzMDY5NywiZXhwIjoxNTk3NjM3ODk3fQ.dnvmcQF8Q8YSEBD5x1YLhR0B5Ft-JSDqOKX_uMohghU'
-}
+
 
 describe("server.js is working", () => {
   test("should be the testing environment", () => {
