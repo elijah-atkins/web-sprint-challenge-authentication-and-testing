@@ -17,4 +17,8 @@ server.use('/api/auth', authRouter);
 server.use('/api/users', authenticate, userRouter);
 server.use('/api/jokes', authenticate, jokesRouter);
 
+server.get("/", (req, res) => {
+    res.status(200).json({ api: "up and ATOM" });
+  });
+
 module.exports = server;
