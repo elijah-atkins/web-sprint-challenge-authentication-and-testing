@@ -58,11 +58,4 @@ describe("Testing Login", () => {
   });
 });
 
-describe("Testing User API endpoints", () => {
-  test("/get users", async () => {
-    const response = await request(server).get("/api/users").set(auth);
-    expect(response.statusCode).toBe(401);
-    expect(response.type).toBe("application/json");
-    expect(response.body).toBe("Welcome to our API user");
-  })
-})
+
