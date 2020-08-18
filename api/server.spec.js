@@ -11,7 +11,6 @@ const user1 = {
   password: "password",
 };
 
-
 describe("server.js is working", () => {
   test("should be the testing environment", () => {
     expect(process.env.DB_ENV).toBe("testing");
