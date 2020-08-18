@@ -1,4 +1,4 @@
-const router = require('express').Router();
+const router = require("express").Router();
 const bcryptjs = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const secrets = require("../config/secrets.js");
@@ -9,6 +9,19 @@ function isValid(user) {
   return Boolean(
     user.username && user.password && typeof user.password === "string"
   );
+}
+
+function generateToken(user) {
+  const payload = {
+    subject: user.id,
+    username: user.username,
+  };
+
+  const options = {
+    expiresIn: "2h",
+  };
+
+  return jwt.sign(payload, secrets.jwtSecret, options);
 }
 
 router.post("/register", (req, res) => {
@@ -62,19 +75,5 @@ router.post("/login", (req, res) => {
     });
   }
 });
-
-function generateToken(user) {
-  const payload = {
-    subject: user.id,
-    username: user.username,
-    department: user.department,
-  };
-
-  const options = {
-    expiresIn: "2h",
-  };
-
-  return jwt.sign(payload, secrets.jwtSecret, options);
-}
 
 module.exports = router;

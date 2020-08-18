@@ -25,13 +25,20 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. Differences between using _sessions_ or _JSON Web Tokens_ for authentication.
-    sessions stores cookies as a name-value pair for a domain on our server, Web tokens use cyprographic signatures and Authentication can occure locally 
+
+    in sessions the server will create a session for the user after the user logs in and the session id is stored on a cookie on the user's browser and is authenticated on the server, Web tokens use cyprographic signatures and Authentication can occure locally 
+
 2. What does `bcrypt` do to help us store passwords in a secure manner.
+
     bcrypt adds random bytes and combine it with the password before hasing across the users password. If two users have the same password they will not have the same password hash, making certain hacks more difficult
+
 3. How are unit tests different from integration and end-to-end testing.
+
     unit tests modules in isolation, intergration checks that modules which work well in isolation also play well together. End to end tests check the whole project
+
 4. How _Test Driven Development_ changes the way we write applications and tests.
-    Test Driven Development or TDD is a progame development method where alternate between writing a test and writing code that passes the test.
+
+    Test Driven Development or TDD is a programing development method where alternate between writing a test and writing code that passes the test. 
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
