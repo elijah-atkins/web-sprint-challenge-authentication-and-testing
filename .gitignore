@@ -119,3 +119,7 @@ dist
 .yarn/unplugged
 .yarn/build-state.yml
 .pnp.*
+
+# Database objects
+database/auth.db3
+database/test.db3
